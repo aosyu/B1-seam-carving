@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-static std::vector<std::vector<Image::Pixel>> ReadImageFromCSV(std::ifstream & input)
+std::vector<std::vector<Image::Pixel>> ReadImageFromCSV(std::ifstream & input)
 {
     size_t width, height;
     input >> width >> height;
@@ -21,7 +21,7 @@ static std::vector<std::vector<Image::Pixel>> ReadImageFromCSV(std::ifstream & i
     return table;
 }
 
-static void WriteImageToCSV(const SeamCarver & carver, std::ofstream & output)
+void WriteImageToCSV(const SeamCarver & carver, std::ofstream & output)
 {
     const size_t width = carver.GetImageWidth();
     const size_t height = carver.GetImageHeight();
