@@ -6,6 +6,7 @@ struct Image
 {
     struct Pixel
     {
+        Pixel();
         Pixel(int red, int green, int blue);
 
         int m_red;
@@ -18,4 +19,7 @@ struct Image
     Pixel GetPixel(size_t columnId, size_t rowId) const;
 
     std::vector<std::vector<Pixel>> m_table;
+
+    size_t width() const;
+    size_t height() const;
 };

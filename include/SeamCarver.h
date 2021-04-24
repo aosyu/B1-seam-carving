@@ -55,4 +55,6 @@ public:
 
 private:
     Image m_image;
+
+    std::vector<std::vector<double>> GetPixelEnergyTable() const;
 };
