@@ -12,7 +12,6 @@ Image::Pixel::Pixel(int red, int green, int blue)
 {
 }
 
-//????????????? do ya really need this? think carefully.
 Image::Pixel::Pixel()
     : m_red(0)
     , m_green(0)

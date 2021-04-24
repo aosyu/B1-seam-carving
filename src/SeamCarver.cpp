@@ -49,7 +49,7 @@ std::vector<std::vector<double>> SeamCarver::GetPixelEnergyTable() const
     std::vector<std::vector<double>> energy_table(width, std::vector<double>(height));
     for (size_t i = 0; i < width; i++) {
         for (size_t j = 0; j < height; j++) {
-            energy_table[i][j] = SeamCarver::GetPixelEnergy(i, j);
+            energy_table[i][j] = GetPixelEnergy(i, j);
         }
     }
     return energy_table;
@@ -60,8 +60,7 @@ SeamCarver::Seam SeamCarver::FindHorizontalSeam() const
     size_t height = GetImageWidth();
     size_t width = GetImageHeight();
     std::vector<std::vector<double>> energy_table = GetPixelEnergyTable();
-    Seam seam;
-    seam.resize(height);
+    Seam seam(height);
     double minEl = INT32_MAX;
     std::vector<std::vector<double>> dp = energy_table;
 
@@ -117,8 +116,7 @@ SeamCarver::Seam SeamCarver::FindVerticalSeam() const
     size_t height = GetImageWidth();
     size_t width = GetImageHeight();
     std::vector<std::vector<double>> energy_table = GetPixelEnergyTable();
-    Seam seam;
-    seam.resize(width);
+    Seam seam(width);
     double minEl = INT32_MAX;
     std::vector<std::vector<double>> dp = energy_table;
 
