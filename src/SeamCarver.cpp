@@ -71,7 +71,7 @@ std::vector<std::vector<T>> transposedMatrix(const std::vector<std::vector<T>> &
     return res;
 }
 
-std::vector<size_t> findSeam(std::vector<std::vector<double>> && dp)
+std::vector<size_t> findSeam(std::vector<std::vector<double>> dp)
 {
     const size_t imageWidth = dp.size();
     const size_t imageHeight = dp.empty() ? 0 : dp.front().size();
