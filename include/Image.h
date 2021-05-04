@@ -6,9 +6,8 @@ struct Image
 {
     struct Pixel
     {
-        Pixel();
         Pixel(int red, int green, int blue);
-
+        Pixel();
         int m_red;
         int m_green;
         int m_blue;
@@ -20,6 +19,6 @@ struct Image
 
     std::vector<std::vector<Pixel>> m_table;
 
-    size_t width() const;
-    size_t height() const;
+    size_t GetWidth() const;
+    size_t GetHeight() const;
 };
