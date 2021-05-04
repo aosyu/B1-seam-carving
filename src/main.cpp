@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-static std::vector<std::vector<Image::Pixel>> ReadImageFromCSV(std::ifstream & input)
+std::vector<std::vector<Image::Pixel>> ReadImageFromCSV(std::ifstream & input)
 {
     size_t width, height;
     input >> width >> height;
